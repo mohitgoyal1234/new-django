@@ -1,0 +1,111 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Home Page CSS  -->
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    {% block stylesheet %}
+
+    {% endblock %}
+
+    <title>
+    {% block title %}
+
+    {% endblock %}
+    </title>
+</head>
+
+<body>
+    <!-- Navbar part starts -->
+    <div class="navbar bg-primary">
+        <!-- NCC and IITR Logo -->
+        <div class="logo">
+            <img src="{% static 'images/index/logoncc.png' %}" alt="" class="logoncc">
+            <img src="{% static 'images/index/logoiitr.png' %}" alt="" class="logoiitr1">
+        </div>
+        <!-- Menu  -->
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'team' %}">Team</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><a href="{% url 'faqs' %}">FAQs</a></li>
+
+        </div>
+        <!-- IITR Logo 2 -->
+        <div class="logoiitr2">
+            <img src="{% static 'images/index/logoiitr.png' %}" alt="">
+        </div>
+        <!-- Hamburger  -->
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <!-- Hamburger Menu Box  -->
+            <ul class="menu__box">
+                <li><a class="menu__item" href="{% url 'home' %}">Home</a></li>
+                <li><a class="menu__item" href="{% url 'about' %}">About</a></li>
+                <li><a class="menu__item" href="{% url 'team' %}">Team</a></li>
+                <li><a class="menu__item" href="{% url 'blog' %}">Blog</a></li>
+                <li><a class="menu__item" href="{% url 'events' %}">Events</a></li>
+                <li><a class="menu__item" href="{% url 'faqs' %}">FAQs</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- navbar part end -->
+
+     <!-- body part 1 starts -->
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- body part 1 ends -->
+    <!-- footer starts -->
+    <div class="footer">
+        <div class="contact">
+            <h4>Contact US:-</h4>
+            <p>+91 98054 98989 <br>+91 93047 06106</p>
+        </div>
+        <div id="social">
+            <a href="https://www.facebook.com/ncc.iitr" id="logo1" target="_blank" title="NCC IITR Official Facebook Page"><img class="mx-3"
+                    onload="this.classList.remove('spinner-grow');" src="{% static 'images/index/facebook.png' %}" width="50px"></a>
+            <a href="https://www.instagram.com/ncc.iitr/" id="logo2" target="_blank" title="NCC IITR Official Instagram Handle"><img class="mx-3"
+                    onload="this.classList.remove('spinner-grow');" src="{% static 'images/index/instagram.png' %}" width="50px"></a>
+            <a href="https://www.youtube.com/channel/UCrx5OBkbdv5dldJBDXFfJbA" id="logo3" target="_blank" title="The YouTube Channel by NCC IITR"><img class="mx-3"
+                    onload="this.classList.remove('spinner-grow');" src="{% static 'images/index/youtube.png' %}" width="50px"></a>
+            <a href="#" id="logo4" target="_blank" title="Official Twitter handle of NCC IITR"><img class="mx-3"
+                    onload="this.classList.remove('spinner-grow');" src="{% static 'images/index/twitter.png' %}" width="50px"></a>
+        </div>
+        <div class="address">
+            <p>
+                Address:-<br> IIT Roorkee, Roorkee <br>Uttarakhand, 247667 <br> Email:- <br> iitr@ncc.in
+            </p>
+        </div>
+    </div>
+    <!-- footer ends -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+* {
+  transition: 0.5s all;
+  outline: none !important;
+}
+
+/* body  */
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+/* NCC and IITR Logo */
+.logo .logoncc {
+  margin-left: 15px;
+  margin-top: 6px;
+  width: 50px;
+}
+
+.logo .logoiitr1{
+  width: 50px;
+}
+
+/* Menu  */
+.menu{
+  padding-top: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.menu ul li {
+  font-size: 20px;
+  display: inline-block;
+}
+
+.menu ul li a {
+  color: #BACAF2;
+  text-decoration: none;
+  padding: 5px 20px;
+}
+
+.menu ul li a:hover, .active{
+  color: #BACAF2;
+  padding: 5px 20px;
+  background-color: rgba(178, 194, 233, 0.2);
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* IITR Logo 2 */
+.logoiitr2 {
+  margin-right: 15px;
+  padding-top: 7px;
+}
+
+.logoiitr2 img{
+  width: 50px;
+}
+
+/* Hamburger */
+.hamburger-menu {
+  display: none;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+/* If want to change the hamburger icon to cross icon */
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 3vh;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+  margin-top: 15px;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+/* Hamburger Menu Box  */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 400px;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #0d6efd;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  transition-duration: .25s;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 10px;
+}
+
+.menu__item {
+  display: block;
+  padding: 7px 24px;
+  color: #FFFFFF;
+  font-family: 'Nimbus Sans', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: rgba(178, 194, 233, 0.3);
+  color: #FFFFFF;
+}
+
+/* footer */
+.footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: #676768;
+}
+
+/* Contact  */
+
+.contact{
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.contact p{
+  font-weight: 600;
+}
+
+/* Social  */
+
+#social{
+  display: flex;
+  height: 75px;
+  padding-top: 20px;
+}
+
+a#logo1:hover>img,
+a#logo2:hover>img,
+a#logo3:hover>img,
+a#logo4:hover>img,
+a#logo5:hover>img {
+  transform: scale(1.0);
+}
+
+a#logo1:hover>img {
+  background: rgb(0, 89, 255);
+}
+
+a#logo2:hover>img {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+a#logo3:hover>img {
+  background: #c4302b;
+}
+
+a#logo4:hover>img {
+  background: #00acee;
+}
+
+a#logo5:hover>img {
+  background: #0e76a8;
+}
+
+#logo1,
+#logo2,
+#logo3,
+#logo4,
+#logo5 {
+  padding: 20px;
+}
+
+a#logo1>img,
+a#logo2>img,
+a#logo3>img,
+a#logo4>img,
+a#logo5>img {
+  border-radius: 50%;
+  background: transparent;
+}
+
+/* Address  */
+
+.address{
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+.address p{
+  font-weight: 600;
+}
+
+/* For Mobile View  */
+@media only screen and (max-width:779px) {
+  .menu {
+      display: none;
+  }
+
+  .hamburger-menu {
+      display: block;
+  }
+
+  .logoiitr2 {
+      display: none;
+  }
+  .footer{
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact{
+    margin-left: 0px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .contact h4{
+    font-size: 20px;
+  }
+  .contact p{
+    font-size: 20px;
+  }
+  #social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+  }
+  .address{
+    margin-right: 0px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .address p{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width:779px) and (max-width:910px) {
+  .logoiitr1 {
+      display: none;
+  }
+  #social #logo1, #logo2, #logo3, #logo4, #logo5 {
+    padding-top: 20px;
+  }
+  #social{
+    padding: 30px 2px;
+  }
+  #social img{
+    width: 40px;
+  }
+  .contact{
+    margin-left: 3px;
+    padding: 0px 10px;
+  }
+  .contact h4{
+    font-size: 20px;
+  }
+  .contact p{
+    font-size: 16px;
+  }
+  .address{
+    margin-right: 8px;
+  }
+  .address p{
+    font-size: 18px;
+  }
+}
+/* For window View */
+@media only screen and (min-width:779px) {
+  .logoiitr1 {
+      display: none;
+  }
+  .hamburger-menu{
+    display: none;
+  }
+  .menu{
+    position: absolute;
+    left: 90px;
+  }
+}
+@media only screen and (min-width:400px) and (max-width:500px){
+  #logo1,
+  #logo2,
+  #logo3,
+  #logo4,
+  #logo5 {
+    padding: 10px;
+  }
+}
+@media only screen and (min-width:300px) and (max-width:340px){
+  #social{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px;
+  }
+  #logo1,
+  #logo2,
+  #logo3,
+  #logo4,
+  #logo5 {
+    padding: 0px;
+  }
+}
+@media only screen and (min-width:340px) and (max-width:400px){
+  #logo1,
+  #logo2,
+  #logo3,
+  #logo4,
+  #logo5 {
+    padding: 0px;
+  }
+}
+
+
+/* Team */
+.cadets{
+  margin-top: 150px;
+}
+
+.cadets h2{
+  margin-left: 25px;
+}
+
+.cadets .row .col img{
+  border-radius:1.25rem;
+  display:block;
+  margin:0px auto;
+  width: 261px;
+  height: 262px;
+}
+.alumni h2{
+  margin-left: 25px;
+}
+
+.alumni .row .col img{
+  border-radius:1.25rem;
+  display:block;
+  margin:0px auto;
+  width: 261px;
+  height: 262px;
+}
+
+@media only screen and (min-width:767px){
+  .cadets .row .col p{
+    margin-left: 20px;
+  }
+  .alumni .row .col p{
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width:768px){
+  .cadets .row .col img{
+    width: 300px;
+    height: 270px;
+  }
+  .alumni .row .col img{
+    width: 300px;
+    height: 270px;
+  }
+}
+@media only screen and (min-width:570px) and (max-width:767px){
+  .cadets h2{
+    margin-left: 130px;
+  }
+
+  .alumni h2{
+    margin-left: 130px;
+  }
+}
+@media only screen and (min-width:530px) and (max-width:570px){
+  .cadets h2{
+    margin-left: 120px;
+  }
+  .alumni h2{
+    margin-left: 120px;
+  }
+}
+@media only screen and (min-width:490px) and (max-width:530px){
+  .cadets h2{
+    margin-left: 105px;
+  }
+  .alumni h2{
+    margin-left: 105px;
+  }
+}
+@media only screen and (min-width:460px) and (max-width:490px){
+  .cadets h2{
+    margin-left: 80px;
+  }
+  .alumni h2{
+    margin-left: 80px;
+  }
+}
+@media only screen and (min-width:385px) and (max-width:460px){
+  .cadets h2{
+    margin-left: 60px;
+  }
+  .alumni h2{
+    margin-left: 60px;
+  }
+}

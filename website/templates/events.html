@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'events.css' %}">
+{% endblock %}
+
+{% block title %}
+   HOME
+{% endblock %}
+
+
+{% block content %}
+<div class="container events">
+      <h2 class="mb-4">Present Events</h2>
+      <!-- 1st Row  -->
+      <div class="row" style="display: flex;">
+          <div class="col mb-5">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="">
+          </div>
+          <div class="col mb-5">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="">
+          </div>
+          <div class="col mb-5">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="">
+          </div>
+          <div class="col mb-5">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="">
+          </div>
+      </div>
+      <div class="row" style="display: flex;">
+          <div class="col mb-5">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="">
+          </div>
+          <div class="col mb-5">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="">
+          </div>
+          <div class="col mb-5">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="">
+          </div>
+          <div class="col mb-5">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="">
+          </div>
+      </div>
+  </div>
+
+  <div class="container upevents">
+      <h2 class="mt-5">Upcoming Events</h2>
+      <!-- 1st Row  -->
+      <div class="row">
+          <div class="col mt-4">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="" width="261px" height="262px">
+          </div>
+          <div class="col mt-4">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="" width="261px" height="262px">
+          </div>
+          <div class="col mt-4">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="" width="261px" height="262px">
+          </div>
+          <div class="col mt-4">
+              <img src="{% static 'images/events/event.jpeg' %}" alt="" width="261px" height="262px">
+          </div>
+      </div>
+    </div>
+
+{% endblock %}

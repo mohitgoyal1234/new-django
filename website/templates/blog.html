@@ -1,0 +1,93 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog.css' %}">
+{% endblock %}
+
+{% block title %}
+   BLOGS
+{% endblock %}
+
+
+{% block content %}
+
+<!-- body part 1 starts -->
+  <div class="part_1">
+      <h2>WEEKLY</h2>
+      <div class="latest_blog">
+          <img src="{% static 'images/blog/Blog.png' %}">
+          <p><a href="{% url 'latestblog' %}" target="_blank">
+              Role of NCC in Social Service
+          </a>
+          </p>
+      </div>
+
+      <h2>PREVIOUS BLOGS</h2>
+
+      <div class="previous_blogs">
+          <div class="card">
+              <img src="{% static 'images/blog/NCC.png' %}">
+              <p><a href="{% url 'previousblog' %}" target="_blank">
+                  NCC IITR in Pre-Pandemic Days
+              </a>
+              </p>
+          </div>
+
+          <!-- can add more blocks from the next code -->
+          <!-- <div class="card">
+              <img src="image_1.jpg">
+              <p>
+                  NCC IITR in Pre-Pandemic Days
+              </p>
+              <button class="btn"><a href="">READ</a></button>
+          </div>
+          <div class="card">
+              <img src="image_1.jpg">
+              <p>
+                  NCC IITR in Pre-Pandemic Days
+              </p>
+              <button class="btn"><a href="">READ</a></button>
+          </div>
+          <div class="card">
+              <img src="image_1.jpg">
+              <p>
+                  NCC IITR in Pre-Pandemic Days
+              </p>
+              <button class="btn"><a href="">READ</a></button>
+          </div>
+
+          <div class="card">
+              <img src="image_1.jpg">
+              <p>
+                  NCC IITR in Pre-Pandemic Days
+              </p>
+              <button class="btn"><a href="">READ</a></button>
+          </div>
+          <div class="card">
+              <img src="image_1.jpg">
+              <p>
+                  NCC IITR in Pre-Pandemic Days
+              </p>
+              <button class="btn"><a href="">READ</a></button>
+          </div>
+          <div class="card">
+              <img src="image_1.jpg">
+              <p>
+                  NCC IITR in Pre-Pandemic Days
+              </p>
+              <button class="btn"><a href="">READ</a></button>
+          </div>
+          <div class="card">
+              <img src="image_1.jpg">
+              <p>
+                  NCC IITR in Pre-Pandemic Days
+              </p>
+              <button class="btn"><a href="">READ</a></button>
+          </div> -->
+
+      </div>
+      <!-- <button class="btn btn-primary button">SEE MORE</button> -->
+  </div>
+
+
+{% endblock %}

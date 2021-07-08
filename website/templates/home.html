@@ -1,0 +1,102 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block title %}
+   HOME
+{% endblock %}
+
+
+{% block content %}
+<div id="carouselExampleIndicators" class="carousel slide part_1" data-bs-ride = "carousel" data-bs-touch = "true" >
+   <div class="carousel-indicators">
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+   </div>
+   <div class="carousel-inner">
+     <div class="carousel-item active">
+       <img src="{% static 'images/home/image_1.jpg' %}" class="d-block" alt="image_1">
+     </div>
+     <div class="carousel-item">
+       <img src="{% static 'images/home/image_2.jpg' %}" class="d-block" alt="image_2">
+     </div>
+     <div class="carousel-item">
+       <img src="{% static 'images/home/image_3.jpg' %}" class="d-block" alt="image_3">
+     </div>
+   </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+   </button>
+ </div>
+ <div class="part_2">
+      <!-- line 1 -->
+      <span>एकता और अनुशासन !</span>
+      <!-- line 2 -->
+      <span>Unity and Discipline</span>
+      <!-- aim DIV -->
+      <div class="container">
+          <!-- aim part -->
+          <div class="row">
+              <div class="col-lg-7 aim_0">
+                  <!-- heading AIM -->
+                  <h2>AIM</h2>
+                  <!-- aim paragraph  -->
+                  <p>
+                      The ‘Aims’ of the NCC laid out in 1988 have stood the test
+                      of time and continue to meet the requirements expected of
+                       it in the current socio–economic scenario of the country.
+                  </p>
+                  <!-- aim list -->
+                      <ul>
+                          <li>
+                              To Create a Human Resource of Organized, Trained and Motivated Youth,
+                              To Provide Leadership in all Walks of life and be Always Available for the Service of the Nation.
+                          </li>
+                          <li>
+                              To Provide a Suitable Environment to Motivate the Youth to Take Up a Career in the Armed Forces.
+                          </li>
+                          <li>
+                              To Develop Character, Comradeship, Discipline, Leadership,
+                              Secular Outlook, Spirit of Adventure, and Ideals of Selfless Service amongst the Youth of the Country.
+                          </li>
+                      </ul>
+              </div>
+              <!-- aim image -->
+              <div class="col-lg-4 aim_1">
+                  <img src="{% static 'images/home/aim_pic.png' %}" alt="aim_pic">
+              </div>
+          </div>
+      </div>
+      <!-- pledge part starts -->
+      <div class="part_3">
+          <div class="container">
+                  <div class="row">
+                      <div class="col-lg-4 pledge_0">
+                          <img src="{% static 'images/home/pledge_pic.png' %}" alt="pledge_pic">
+                      </div>
+                      <div class="col-lg-7 pledge_1">
+                          <!-- heading pledge-->
+                          <h2>PLEDGE</h2>
+                          <!--pledge paragraph -->
+                          <p>
+                              We the cadets of the National Cadet Corps,<br>
+                              do solemnly pledge that we shall always uphold the unity of India.<br>
+                              We resolve to be disciplined and responsible citizens of our nation.<br>
+                              We shall undertake positive community service in the spirit of <br>selflessness<br>
+                              and concern for our fellow beings.
+                          </p>
+                      </div>
+                  </div>
+          </div>
+  </div>
+
+{% endblock %}

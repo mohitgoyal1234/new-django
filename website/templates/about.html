@@ -1,0 +1,95 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'about.css' %}">
+{% endblock %}
+{% block title %}
+ABOUT
+{% endblock %}
+{% block content %}
+
+<div class="part_1">
+           <h2>About NCC IIT Roorkee</h2>
+           <div class="bodypart">
+               <p>
+                   The National Cadet Corps (NCC) is a youth development movement.
+                   It has enormous potential for nation building.
+                   The NCC provides opportunities to the youth of the country for their all-round development with a sense of Duty,
+                   Commitment, Dedication, Discipline and Moral Values so that they become able leaders and useful citizens. The NCC provides exposure to the cadets in a wide range of activities, with a distinct emphasis on Social Services,
+                   Discipline and Adventure Training.
+               </p>
+               <p>
+                   The National Cadet Corps, IIT Roorkee under the unit 3 UK Composite Technical Regiment National
+                   Cadet Corps is a student unit of the Indian Army which aims to develop a sense of discipline,
+                   rigour and unity in the cadets. It provides a platform to the students of the college to develop
+                   their personality by engaging themselves in various events organised by it. The Guard of Honour,
+                   Indoor and outdoor sports events, firing practice and Training camps aim at inculcating the values
+                   of team-work and discipline in the cadets along with an exposure to life in the army. At the same me,
+                   working for the society, the NCC also conducts plantation and cleanliness drives, awareness campaigns
+                   and activities for social causes to instil the spirit of service in the young cadets. Currently, the
+                   NCC has 420 acre members who are continuously guided by the Commanding Officer of the unit and are
+                   working towards self-development and nation-building. ‘UNITY AND DISCIPLINE’, the motto of the NCC
+                   precisely highlights the aim and culture of the unit.
+               </p>
+           </div>
+</div>
+<div class="part_2">
+       <h2>Activities</h2>
+       <!-- part 2.1 starts -->
+       <div class="row part_2_1">
+           <div class="col-lg-8 col-md-8 col-sm-8 general_1">
+               <h3>General <img src="{% static 'images/about/general.png' %}" class="gpic"></h3>
+                   <ol>
+                       <li>
+                           Parades are regularly held to train the cadets in foot drill and command, weapon training, field craft, civil defence, map reading etc.
+                       </li>
+                       <li>
+                           Guard of Honour is given on 26th January and 15th August to commemorate the Republic Day and Independence Day of India.
+                       </li>
+                   </ol>
+           </div>
+           <div class="col-lg-4 col-md-4 col-sm-4 general_2">
+               <img src="{% static 'images/about/general.png' %}">
+           </div>
+       </div>
+       <!-- part 2.1 ends -->
+
+       <!-- part 2.2 starts -->
+       <div class="row part_2_2">
+           <div class="col-lg-4 col-md-4 col-sm-4 camp_1">
+               <img src="{% static 'images/about/camp.png' %}">
+           </div>
+           <div class="col-lg-8  col-md-8 col-sm-8 camp_2">
+               <h3><img src="{% static 'images/about/camp.png' %}" class="cpic"> Camp </h3>
+               <ol>
+                   <li>An Annual Training Camp is held to further enhance and inculcate a feeling of independence in the cadets.</li>
+                   <li>Extensive knowledge about devices used in the Army like mines, bridges, nuclear and biological weapons etc. is imparted.</li>
+                   <li>Self-defence training is also given</li>
+                   <li>Rigorous physical training is provided in the camp with a view to increasing the physical endurance of the cadets.</li>
+                   <li>Military training with rifles is also provided.</li>
+                   <li>Cultural programmes are also held with a view to improving the cultural and social outlook of the cadets.</li>
+               </ol>
+           </div>
+       </div>
+       <!-- part 2.2 ends -->
+
+       <!-- part 2.3 starts -->
+
+       <div class="row part_2_3">
+           <div class="col-lg-8 col-md-8 col-sm-8 social_1">
+               <h3>Social <img src="{% static 'images/about/social.png' %}" class="spic"></h3>
+                   <ol>
+                       <li>
+                           Various social activities are also organized to encourage the feeling of belonging to the society like awareness campaigns, nukkad-nataks and cycle rallies.
+                       </li>
+                   </ol>
+           </div>
+           <div class="col-lg-4 col-md-4 col-sm-4 social_2">
+               <img src="{% static 'images/about/social.png' %}">
+           </div>
+       </div>
+       <!-- part 2.3 ends -->
+
+</div>
+
+{% endblock %}
